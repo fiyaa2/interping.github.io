@@ -1,0 +1,751 @@
+/* Set general styles for the page */
+html {
+    height: 100%; /* Sets the height of the html element to 100% */
+    width: 100%; /* Sets the width of the html element to 100% */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    box-sizing: border-box; /* Include padding and border in total width and height */
+}
+
+body {
+    background-color: #ECDCC9; /* Background color */
+    margin: 1in; /* 1-inch margin on all sides */
+    font-family: 'Futura', sans-serif; /* Font family */
+    color: #0E273C; /* Text color */
+    padding: 20px; /* Padding around the body */
+}
+
+/* Reset body and html margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set a default font */
+}
+
+/* Remove margin/padding from the header and hero section */
+header {
+    margin-bottom: 0; /* Remove any space below the navbar */
+    padding-bottom: 0; /* Remove padding from the bottom */
+}
+
+#hero {
+    margin-top: 0; /* Remove the space between the hero and navbar */
+    padding-top: 0; /* Remove the padding from the top */
+}
+
+
+/* Hero Section */
+#hero {
+    background: none; /* Ensure no background color */
+    padding: 0; /* Remove padding */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center;
+    padding-top: 10%; /* Adjust this to raise the heading */
+    margin-bottom: 0px;
+    padding-bottom: 10px; /* Remove margin if needed */
+}
+
+/* Hero Section Main Heading (InternPing) */
+#hero h1 {
+    font-family: 'League Spartan', sans-serif; /* Apply League Spartan font */
+    font-size: 10em; /* Adjust the font size */
+    color: #cabcaa; /* Text color */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 
+        2px 2px 0 #593d3b,   /* First layer of shadow for 3D effect */
+        4px 4px 0 #593d3b,   /* Second layer for depth */
+        6px 6px 0 #593d3b,   /* Third layer for more depth */
+        8px 8px 5px rgba(0, 0, 0, 0.3);  /* Final shadow for soft glow */
+}
+
+
+
+/* Hero Section Subheading */
+#hero h3 {
+    font-family: 'League Spartan', sans-serif; /* Apply League Spartan font */
+    font-size: 2.5em; /* Adjust the font size */
+    color: #ECDCC9; /* Set the text color to the light beige */
+    margin-bottom: 20px; /* Space between the subheading and the next element */
+    text-shadow: 
+        2px 2px 0 #593d3b,   /* First layer of shadow for the 3D effect */
+        4px 4px 0 #593d3b,   /* Second layer of shadow for depth */
+        6px 6px 0 #593d3b,   /* Third layer of shadow for more depth */
+        8px 8px 5px rgba(0, 0, 0, 0.3);  /* Final shadow for soft glow */
+}
+
+#logo {
+    position: absolute; /* Position it on the top left */
+    top: 10px; /* Space from the top */
+    left: 10px; /* Space from the left */
+    width: 150px; /* Adjust the size of the logo */
+    height: auto; /* Keep the aspect ratio */
+}
+
+/* Navbar */
+.navbar {
+    background: transparent; /* Set navbar background to transparent */
+    /* Remove position: fixed; so it scrolls with the page */
+    padding: 30px; /* Keep padding as needed */
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    font-size: 1.5em; /* Increase font size for navbar links */
+}
+
+/* Navbar Links */
+.navbar li {
+    display: inline;
+    margin-left: 30px; /* Add space between navbar items */
+}
+
+/* Navbar Link Styling */
+.navbar li a {
+    text-decoration: none;
+    color: #000; /* Black text color */
+    font-weight: bold;
+}
+
+/* Navbar Link Hover Effect */
+.navbar li a:hover {
+    color: #FFAFCC; /* Change color to pink on hover */
+}
+
+/* Styling for the Log In button */
+.navbar .login-btn {
+    padding: 10px 20px;
+    background-color: #FFAFCC; /* Pink background for login */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* White text */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from the link */
+    margin-right: 20px; /* Add some space between buttons */
+}
+
+/* Log In button hover effect */
+.navbar .login-btn:hover {
+    background-color: #ff99cc; /* Light pink on hover */
+}
+
+/* Styling for the Sign Up button */
+.navbar .signup-btn {
+    padding: 10px 20px;
+    background-color: #A1C4E8; /* Blue background for signup */
+    border: none;
+    border-radius: 5px;
+    color: #fff; /* White text */
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Sign Up button hover effect */
+.navbar .signup-btn:hover {
+    background-color: #7aa5d6; /* Light blue on hover */
+}
+
+/* Navbar styling */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; /* This controls the space between each navbar item */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+/* Navbar Links (regular state) */
+.navbar ul li a {
+    font-family: 'League Spartan', sans-serif; /* Ensure League Spartan font is used */
+    color: black; /* Set the font color to black */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for color and background */
+}
+
+/* Button styles */
+.navbar ul li a.login-btn, 
+.navbar ul li a.signup-btn {
+    background-color: #593D3B; /* Dark brown background */
+    color: white; /* White text */
+    padding: 8px 15px; /* Smaller padding for smaller buttons */
+    font-size: 1em; /* Smaller font size */
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Hover effect for buttons */
+.navbar ul li a.login-btn:hover,
+.navbar ul li a.signup-btn:hover {
+    background-color: white; /* White background */
+    color: #593D3B; /* Dark brown text */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2); /* Optional: Add subtle shadow on hover */
+}
+
+/* Optional: Navbar link hover effect (excluding buttons) */
+.navbar ul li a:hover {
+    color: #593D3B; /* Change text color on hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow on text hover */
+}
+
+
+
+/* Revealable Sections */
+.revealable {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-out; /* Smooth fade-in transition */
+}
+
+/* Active Revealable Section */
+.revealable.active {
+    opacity: 1; /* Make visible when the class 'active' is added */
+}
+
+/* About Section */
+#about {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ECDCC9;
+    color: #422800;
+}
+
+#about h2 {
+    font-size: 32px;
+    font-family: 'League Spartan', sans-serif;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+  
+
+
+
+/* Adjustments for Responsiveness */
+@media (max-width: 768px) {
+    /* Adjusting the font size of headings for smaller screens */
+    #hero h1 {
+        font-size: 4em; /* Adjust title font size for smaller screens */
+    }
+
+    #hero h3 {
+        font-size: 2.5em; /* Adjust subtitle font size for smaller screens */
+    }
+    #logo {
+        width: 120px; /* Smaller logo for smaller screens */
+    }
+
+    .navbar {
+        flex-direction: row-reverse; /* For smaller screens, reverse the navbar items */
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navbar li {
+        margin-left: 10px; /* Reduce the space between navbar items */
+    }
+}
+/* Styling for Login Page */
+#login-section {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#login-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#login-form input[type="submit"] {
+    background-color: #FFAFCC;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+#login-form input[type="submit"]:hover {
+    background-color: #ff99cc;
+}
+
+/* Styling for Sign Up Page */
+#signup-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#signup-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#signup-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#signup-form input, #signup-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#signup-form input[type="submit"] {
+    background-color: #FFAFCC;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+#signup-form input[type="submit"]:hover {
+    background-color: #ff99cc;
+}
+
+/* Center the card and buttons */
+#cards-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+/* Remove the white background and box */
+.card-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Card image */
+.card img {
+    width: 500px; /* Slightly larger image */
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Buttons styling */
+#decline-btn, #ping-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Positioning buttons outside the card */
+#decline-btn {
+    left: -120px; /* Move further left */
+    background-color: #FFAFCC;
+}
+
+#ping-btn {
+    right: -120px; /* Move further right */
+    background-color: #A1C4E8;
+}
+
+/* Hover effects */
+#decline-btn:hover {
+    background-color: #ff99cc;
+}
+
+#ping-btn:hover {
+    background-color: #7aa5d6;
+}
+
+/* No more opportunities message */
+#no-more-opportunities {
+    text-align: center;
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 20px;
+}
+/* Styling for the Get Started button */
+.button-56 {
+    align-items: center; /* Aligns text in the center */
+    background-color: #ECDCC9; /* Light pink background */
+    border: 2px solid #111; /* Dark border */
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box; /* Ensures padding doesn't affect the box size */
+    color: #111; /* Dark text */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: flex; /* Flexbox for centering content */
+    font-family: 'League Spartan', sans-serif; /* Font */
+    font-size: 16px; /* Font size */
+    height: 48px; /* Button height */
+    justify-content: center; /* Centers the text horizontally */
+    line-height: 24px; /* Line height for vertical centering */
+    max-width: 100%; /* Max width to make it responsive */
+    padding: 0 25px; /* Horizontal padding */
+    position: relative; /* For positioning pseudo-elements */
+    text-align: center; /* Centers the text */
+    text-decoration: none; /* Removes underline */
+    user-select: none; /* Disables text selection */
+    -webkit-user-select: none;
+    touch-action: manipulation; /* For touch actions */
+  }
+  
+  /* The after pseudo-element for shadow effect */
+  .button-56:after {
+    background-color: #111; /* Dark shadow color */
+    border-radius: 8px; /* Match the button's rounded corners */
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Block element */
+    height: 48px; /* Same height as the button */
+    left: 0; /* Aligns to the left of the button */
+    width: 100%; /* Full width */
+    position: absolute; /* Absolute positioning for the shadow effect */
+    top: -2px; /* Moves the shadow slightly up */
+    transform: translate(8px, 8px); /* Offsets the shadow diagonally */
+    transition: transform .2s ease-out; /* Smooth transition on hover */
+    z-index: -1; /* Places the shadow behind the button */
+  }
+  
+  /* On hover, the shadow shifts into place */
+  .button-56:hover:after {
+    transform: translate(0, 0); /* Moves the shadow into place */
+  }
+  
+  /* Active state for the button */
+  .button-56:active {
+    background-color: #ECDCC9; /* Light pink background when clicked */
+    outline: 0; /* Removes the outline on active state */
+  }
+  
+  /* Hover effect for the button */
+  .button-56:hover {
+    outline: 0; /* Removes the outline when hovered */
+  }
+  
+  /* Responsive styling for larger screens */
+  @media (min-width: 768px) {
+    .button-56 {
+      padding: 0 40px; /* Increases padding for larger screens */
+    }
+  }
+ 
+  /* Style for the Internship Strip */
+.internship-strip {
+    background-color: #fbeee0; /* Light beige background */
+    padding: 20px 0; /* Space above and below the strip */
+    overflow: hidden; /* Prevent overflow */
+    text-align: center;
+    position: relative;
+}
+
+.internship-strip span {
+    display: inline-block;
+    font-size: 2rem; /* Adjust size */
+    font-weight: bold;
+    color: #593d3b; /* Set the text color */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    animation: scroll 15s linear infinite; /* Animation for scrolling effect */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left off-screen */
+    }
+}
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ECDCC9; /* Match your site’s theme */
+    color: 422800;
+    padding: 20px 0;
+    font-size: 16px;
+}
+.divider {
+    width: 100%;  /* Makes it span the entire width of the screen */
+    margin: 20px 0;  /* Adds vertical space above and below */
+    border: none;
+    border-top: 1px solid #3f37c9; /* Thinner line (1px), using your theme color */
+    opacity: 0.8;  /* Optional: Slightly transparent */
+}
+
+/* Section container for profile and swiping layout */
+#profile-swiping {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-left: 40px;
+}
+
+/* Left section - Profile header */
+.left-section, .right-section {
+    padding: 20px;
+}
+
+.left-section {
+    width: 30%;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 40px;  /* Add margin to the right */
+    margin-left: 40px;
+}
+
+.left-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.left-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.left-section ul li {
+    margin: 15px 0;
+}
+
+.left-section ul li a {
+    color: #3f37c9;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.left-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.right-section {
+    width: 70%;
+}
+
+/* Card styles */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#card-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Button styles */
+button {
+    background-color: #3f37c9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #2f28a3;
+}
+
+/* No opportunities message */
+#no-more-opportunities {
+    text-align: center;
+    color: #ff6347;
+    font-size: 1.5em;
+    display: none;
+}
+/* Profile section container */
+#profile-swiping {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+  }
+  
+  /* Center the profile heading */
+.left-section {
+    width: 30%;
+    padding: 20px;
+    background-color: #593d3b;  /* Optional: Add background color */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center content vertically */
+    align-items: center;  /* Center content horizontally */
+  }
+  
+  /* Center the "My Profile" title */
+  .left-section h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;  /* Center the heading text */
+    font-weight: bold;   /* Keep it bold */
+  }
+  
+  
+  /* Profile Heading */
+  .left-section h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  /* Tabs container (To-Do, Resume, Account) */
+  .tabs {
+    margin-top: 20px;
+  }
+  
+  /* Each tab (To-Do, Resume, Account) */
+  .tab {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #baa898;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tab headings */
+  .tab h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* To-Do list container */
+  .todo-container {
+    margin-top: 10px;
+  }
+  
+  /* To-Do list input */
+  #new-task {
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  #add-task {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #3f37c9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #add-task:hover {
+    background-color: #2f28a3;
+  }
+  
+  /* To-Do list */
+  #todo-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 15px;
+  }
+  
+  #todo-list li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  #todo-list li input {
+    margin-right: 10px;
+  }
+  
+  /* Right section (cards and opportunities) */
+  .right-section {
+    flex: 1.5;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Cards section styling */
+  .card-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  #decline-btn, #ping-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3f37c9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #decline-btn:hover, #ping-btn:hover {
+    background-color: #2f28a3;
+  }
+  

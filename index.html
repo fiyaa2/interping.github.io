@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>InternPing.com</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+ <!-- Header Section -->
+<header>
+    <img src="images/logo.png" alt="InternPing Logo" id="logo">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Opportunities</a></li>
+            <!-- Log In Button -->
+            <li><a href="login.html" class="login-btn">Log In</a></li>
+            <!-- Sign Up Button -->
+            <li><a href="signup.html" class="signup-btn">Create Account</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section (Full Screen) -->
+<section id="hero">
+    <h1>InternPing.</h1>
+    <h3>Opportunity? Ping it!</h3>
+    <button class="button-56" role="button">Get Started</button>
+</section>
+</section>
+
+
+<!-- Internship Strip Section -->
+<div class="internship-strip">
+    <span>Looking for a long-term commitment? How about a summer internship first? </span>
+</div>
+
+<!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <h2>🚀 The Easiest Way to Land Your Dream Internship!</h2>
+        <p>
+            Say goodbye to endless job boards! With <strong>InternPing</strong>, finding internships is as easy as swiping.  
+            <span style="color: #ff5c5c;">Swipe right</span> to ‘ping’ exciting opportunities, or <span style="color: #5c9eff;">swipe left</span> to pass.  
+            It’s like <strong>Tinder for internships</strong> – fast, fun, and effortless!  
+            <br><br>
+            <em>🔔 Start swiping now and never miss an opportunity again!</em>
+        </p>
+    </div>
+</section>
+
+<!-- Divider -->
+<hr class="divider">
+
+<!-- Profile Section -->
+<section id="profile-swiping">
+    <div class="left-section">
+      <h3><b>My Profile</b></h3>
+      
+      <!-- My Profile Tabs (To-Do, Resume, Account) -->
+      <div class="tabs">
+        <!-- To-Do Tab -->
+        <div class="tab" id="todo-tab">
+          <h4>To-Do</h4>
+          <div class="todo-container">
+            <!-- Input for new To-Do task -->
+            <input type="text" id="new-task" placeholder="Enter task..." />
+            <button id="add-task">Add Task</button>
+            
+            <!-- List of To-Dos -->
+            <ul id="todo-list"></ul>
+          </div>
+        </div>
+  
+        <!-- Resume Tab -->
+        <div class="tab" id="resume-tab">
+          <h4>Resume</h4>
+          <p>Upload your resume here.</p>
+          <input type="file" id="resume-upload" />
+        </div>
+  
+        <!-- Account Tab -->
+        <div class="tab" id="account-tab">
+          <h4>Account</h4>
+          <p>Account details and settings.</p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Cards Swiping Section -->
+<div class="right-section">
+    <section id="cards-section">
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card" id="card1">
+          <h3>"Swipe now, intern later!"</h3>
+          <img id="card-image" src="images/card1.png" alt="Internship 1">
+        </div>
+        
+        <!-- Buttons for Decline and Ping -->
+        <button id="decline-btn" class="action-btn">Decline</button>
+        <button id="ping-btn" class="action-btn">Ping!</button>
+      </div>
+      <h2 id="no-more-opportunities" style="display: none;">Oops, no more opportunities now!</h2>
+    </section>
+  </div>
+  
+    
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: support@internping.com</p>
+        </div>
+    </div>
+
+    <p class="footer-bottom">© 2025 InternPing. All rights reserved.</p>
+</footer>
+</html>
